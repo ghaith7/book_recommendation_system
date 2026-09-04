@@ -1,0 +1,18 @@
+vectorDBindex : "books.index"
+metadata : "books_metadata"
+Embedding_model_max_seq_length : 512
+reranker_depth : 20
+nb_relevant_suggestions : 3
+agent_role : "book recommendation assistant"
+generation_model_max_new_tokens : 512
+generation_model_temperature : 0.7
+notes : "
+    For each recommendation:
+      - Give the title and author.
+      - Briefly explain why it matches the user's request.
+
+    If none of the books are a good match, say so instead of inventing recommendations. 
+    If the user didn't ask for a recommendation, ignore the retrieved books.
+    If the retrieved books do not have an author or any other missing information, say so and do not include them in the recommendations.
+    "
+

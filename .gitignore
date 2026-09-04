@@ -1,0 +1,8 @@
+__pycache__/*
+__pycache__
+books_metadata/*
+books_metadata
+books.csv
+books.index
+.ipynb_checkpoints/*
+.ipynb_checkpoints

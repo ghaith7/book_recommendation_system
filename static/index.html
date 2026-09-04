@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Stacks &mdash; browse &amp; ask</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="topbar">
+  <h1 class="wordmark">Stacks</h1>
+  <nav class="tabs" role="tablist">
+    <button class="tab active" data-tab="library" role="tab" aria-selected="true">Library</button>
+    <button class="tab" data-tab="recommend" role="tab" aria-selected="false">Ask for a recommendation</button>
+  </nav>
+</header>
+
+<main>
+
+  <!-- LIBRARY VIEW -->
+  <section id="library" class="view active">
+    <div class="search-row">
+      <div class="field">
+        <label for="q-title">Title</label>
+        <input id="q-title" type="text" placeholder="e.g. Dracula" />
+      </div>
+      <div class="field">
+        <label for="q-author">Author</label>
+        <input id="q-author" type="text" placeholder="e.g. Tolstoy" />
+      </div>
+      <div class="field">
+        <label for="q-year">Year</label>
+        <input id="q-year" type="text" placeholder="e.g. 1897" />
+      </div>
+    </div>
+
+    <p id="result-count" class="result-count"></p>
+
+    <div id="book-grid" class="book-grid"></div>
+    <p id="empty-state" class="empty-state" hidden>No books match those filters.</p>
+  </section>
+
+  <!-- RECOMMEND VIEW -->
+  <section id="recommend" class="view">
+    <div class="chat-panel">
+      <div id="chat-log" class="chat-log">
+        <div class="msg bot">
+          Tell me what you're in the mood for &mdash; a period, a mood, an author you already
+          love &mdash; and I'll suggest five books.
+        </div>
+      </div>
+      <form id="chat-form" class="chat-form">
+        <input id="chat-input" type="text" placeholder="Ask for a recommendation&hellip;" autocomplete="off" />
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
